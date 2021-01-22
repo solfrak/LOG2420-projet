@@ -1,4 +1,36 @@
 {
-    "titre" : "Frigoscommunautaires",
-    "sousTitre" : "Espace entretien"
+    "donne" : [
+        {"titre" : "Frigoscommunautaires"},
+        {"titre" : "Espace entretien"},
+        {"fleche": "Mes frigos"}
+    ],
+
+
+    "bottin" : [
+        {   "name" : "Simon",
+            "lastName" : "Tremblay",
+            "poste" : "Préposé entretien",
+            "email" : "stremblay3450@videotron.ca"},
+            
+        {   "name" : "Michel",
+            "lastName" : "Gagnon",
+            "poste" : "Gestionnaire entretien",
+            "email" : "migchel.agnon.967@gmail.com"},
+            
+        {   "name" : "Robert",
+            "lastName" : "Roy",
+            "poste" : "Préposé entretien",
+            "email" : "robert.roy345@outlook.com"},
+            
+        {   "name" : "Fanny",
+            "lastName" : "Côté",
+            "poste" : "Préposé entretien",
+            "email" : "fcote3450@videotron.ca"},
+        
+        {   "name" : "Robert",
+            "lastName" : "Morin",
+            "poste" : "Préposé entretien",
+            "email" : "rrmorin3450@videotron.ca"}
+    ]
+
 }

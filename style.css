@@ -24,8 +24,6 @@ ul {
   font-weight: 400;
 }
 
-.article {
-}
 .frigos {
   float: right;
 }
@@ -38,12 +36,11 @@ ul {
   background-color: rgba(0, 140, 140, 1);
 }
 
-.nouvelles {
-  float: left;
+.commande {
+  float: right;
+  margin: 0;
 }
-
 .bas_de_page {
-  background-color: rgb(50, 50, 100);
 }
 .column {
   float: left;
