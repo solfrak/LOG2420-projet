@@ -31,6 +31,13 @@
             "lastName" : "Morin",
             "poste" : "Préposé entretien",
             "email" : "rrmorin3450@videotron.ca"}
-    ]
+    ],
 
+    "Produit" : [
+
+        {"NomProduit":"Savon" },
+        { "NomProduit": "Guenillhe"},
+        { "NomProduit": "Désodorisant"},
+        { "NomProduit": "Ampoules"}
+    ]
 }

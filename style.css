@@ -8,6 +8,21 @@ ul {
   margin: 0;
   padding: 0;
 }
+.Guide{
+  font-family: Roboto;
+  font-size: 18px;
+
+}
+li{
+  margin-bottom: 5%;
+}
+.navigation {
+  text-align: center;
+  color: white;
+  border-width: 0px;
+  position: relative;
+  background-color: rgba(0, 140, 140, 1);
+}
 
 .title {
   text-align: center;
@@ -18,32 +33,116 @@ ul {
   font-weight: 500;
 }
 
+.popup{
+  font-size: 100%;
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+
+#popup_p{
+  font-size: 10%;
+}
+
 .subtitle {
   text-align: center;
   color: white;
   font-weight: 400;
 }
 
-.frigos {
-  float: right;
+.fleche {
+  text-align: right;
 }
 
-.navigation {
-  text-align: center;
-  color: white;
-  border-width: 0px;
-  position: relative;
-  background-color: rgba(0, 140, 140, 1);
+.frigos {
+  float: right;
+  width: 75%;
+}
+
+.bottin{
+  
 }
 
 .commande {
   float: right;
   margin: 0;
+  width: 33.33%;
+  outline-style: solid;
+  outline-color: black;
 }
+.commandElem{
+  /* height: 10px; */
+  float: left;
+  width: 33.33%;
+  column-count: 3;
+}
+.commandElemInput {
+
+  width: 80px;
+  height: 40px;
+  border-radius: 15%;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: normal;
+  color: #8C8C8C;
+  vertical-align: none;
+  text-align: left;
+  text-transform: none;
+  border-color: transparent;
+}
+.nouvelles {
+  float: left;
+  width: 66.66%;
+
+}
+
 .bas_de_page {
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(242, 242, 242) 0%, rgb(228, 228, 228) 100%, rgb(255, 255, 255) 100%);
 }
 .column {
   float: left;
   width: 33.33%;
   font-weight: bold;
 }
+
+
+#bottin {
+}
+
+.article{
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.article:hover {
+  cursor: pointer;
+}
+.articlep{
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+h1{
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+.popup{
+  background-color: rgba(255, 255, 255, 1);
+  /* border-width: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 582px;
+  height: 295px;
+  display: flex;
+  text-align: left; */
+}
+

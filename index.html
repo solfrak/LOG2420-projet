@@ -1,70 +1,45 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style_login.css">
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Acceuil</title>
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+        <title>Login</title>
     </head>
     <body>
-        <section class="navigation">
-            <h1 class="title" id = "titre"></h1>
-            <h2 class="subtitle" id = "sous-titre"></h2>
+        <!-- Login Pop-up window -->
+        <section class="Login" id="Login">
 
-            <div class="fleche">
-                <img src=""></img>
-                <p class="fleche" id = "fleche"></p>
-            </div>
-        </section> 
-
-        <aisde class="commande">
-            <h1>Commande du matériel</h1>                 
-        </aisde>
-
-        <section class="nouvelles_et_commandes">
-            <div class = "nouvelles">
-                <h1>Nouvelles</h1>
-                <ul>
-                    <li class="article">
-                        <a href="#" class="title-nouvelles" >Nouveau site Web transactionnel</a>
-                        <p>Lorem ipsum </p>
-                    </li>
-                    <li class="article">
-                        <a href="#" class="title-nouvelles">Nouveaux frigos arrivés</a>
-                        <p>Lorem ipsum </p>
-                    </li>
-                    <li class="article">
-                        <a href="#" class="title-nouvelles">Nouvelle 001</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus ... </p>
-                    </li>
-                    <li class="article">
-                        <a href="#" class="title-nouvelles">Nouvelle 001</a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus ... </p>
-                    </li>
-                </ul>
-            </div>
-        </section> 
-        
-        <section class="bas_de_page">
-            <div class="column">
-                <p>Guides d'entretien</p>
-                <a href="#">Nettoyage et vérifications générales</a><br>
-                <a href="#">Nettoyage des serpentins  du condenseur</a><br>
-                <a href="#">Dégivrage</a><br>
-                <a href="#">Vérification du système de drainage</a><br>
+            <div id="modal_login" class="modal">
+                <div class="modal_content">
+                    <form name="form">
+                        <h5 id="acces_membre">Accès à l'espace membre</h5>
+                        <hr>
+                        <div>
+                            <label>Nom d'utilisateur</label>
+                            <input class="benevole" type="checkbox" id="benevole" name="benevole" value="benevole">
+                            <label>Bénévole</label> <br>
+                            <input class="username_input" autocomplete="off" type="text" id="username" name="username">
+                            <h6 id="error">Les données saisies ne sont pas correctes </h6>
+                        </div>
+                        <div>
+                            <label>Mot de passe</label> <br>
+                            <input class="password_input" type="password" id="password" name="password">
+                        </div>
+                        <hr>
+                        <div>
+                            <button type="reset" id="button_annuler" name="button_annuler" class="button button1">Annuler</button>
+                            <button type="button" id="button_connecter" name="button_connecter" class="button button2">Connecter</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <div class="column" id ="bottin">
-              <p>Bottin</p>
-            </div>
-
-            <div class="column">
-                <p>Compostage et partenaires</p>
-            </div>
         </section>
         
     </body>
 
-    <script src = "script.js"></script>
+    <script src = "script_login.js"></script>
     <script src="data.json"></script>
 </html>
