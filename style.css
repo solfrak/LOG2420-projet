@@ -200,8 +200,27 @@ li{
 }
 
 .popupExitButtons{
-  top: 50%;
+  font-size: 18px;
+  position: absolute;
+  top: 87%;
+  display: inline-block;
 }
+
+.popupExitAnnuler{
+  color: rgba(0, 140, 140, 1);
+}
+
+.popupExitOk{
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 140, 140, 1);
+  white-space: nowrap;
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 /*Commandes*/
 .commande {
   float: right;
@@ -284,8 +303,8 @@ h1{
 /*Bottin*/
 .nom{
   position: relative;
+  font: "Roboto";
   font-size: 14px;
-  font-family: "Roboto";
   font-weight: 700;
   text-align: left;
   color: rgb(51,51,51);
@@ -293,7 +312,7 @@ h1{
 }
 .email{
   font-size: 14px;
-  font-family: Arial, sans-serif;
+  font: Arial, sans-serif;
   font-weight: lighter;
 }
 .copy_icon{
@@ -303,10 +322,7 @@ h1{
   width:15px;
   cursor: pointer;
 }
-.clipboard
-{
-  display: none;
-}
+
 /*Compostage et Partenaires*/
 a{
   text-decoration: none;
