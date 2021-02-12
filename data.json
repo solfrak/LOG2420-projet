@@ -1,5 +1,5 @@
 {
-    "donne" : [
+    "donne": [
         {"titre" : "Frigoscommunautaires"},
         {"titre" : "Espace entretien"},
         {"fleche": "Mes frigos"}
@@ -7,15 +7,17 @@
 
 
     "bottin" : [
-        {   "name" : "Simon",
-            "lastName" : "Tremblay",
-            "poste" : "Préposé entretien",
-            "email" : "stremblay3450@videotron.ca"},
+        
             
         {   "name" : "Michel",
             "lastName" : "Gagnon",
             "poste" : "Gestionnaire entretien",
-            "email" : "migchel.agnon.967@gmail.com"},
+            "email" : "migchel.gagnon.967@gmail.com"},
+        
+        {   "name" : "Simon",
+            "lastName" : "Tremblay",
+            "poste" : "Préposé entretien",
+            "email" : "stremblay3450@videotron.ca"},
             
         {   "name" : "Robert",
             "lastName" : "Roy",

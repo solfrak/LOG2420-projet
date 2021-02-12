@@ -12,36 +12,37 @@ body {
     width:100%;
     z-index: 1; 
   }
-  
-  .modal_content {
+
+
+.modal_content {
     position:absolute; 
     background-color: rgba(255,255,255,1);
     padding: 0.5rem;
     color: #8c8c8c;
   }
   
-  .username_input, .password_input{
+.username_input, .password_input{
     padding: 2px;
     height: 40px;
     border-style: 2px solid black;
     border-radius: 2px;
   }
-  .label {
+.label {
     font-size: 14px;
     text-align: left;
   }
-  h5 {
+ 
+h5 {
     /*Arial bold*/
-    font-weight: 700;
-    font-size: 24px ;
-    padding-left: 5%; /*?*/
-  }
-  h6 {
-    color: red;
+ font-weight: 700;
+ font-size: 24px ;
+ padding-left: 5%; /*?*/
+
+h6{
+    color:red;
     border-bottom: 5px solid red;
     visibility: hidden;
-    /* round thingy*/
-  }
+}
   .button {
     font-size: 18px;
     position: relative;

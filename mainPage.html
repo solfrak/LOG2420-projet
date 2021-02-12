@@ -7,45 +7,105 @@
         <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
         <title>Acceuil</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+        <link rel="shortcut icon" href="https://d1h0x9w88ijkiq.cloudfront.net/3717a/images/favicon_play.ico">
     </head>
     <body>
         <section class="navigation">
-            <h1 class="title" id = "titre"></h1>
-            <h2 class="subtitle" id = "sous-titre"></h2>
-
-            <div class="fleche">
-                <!-- <img src=""></img> -->
-                <p class="fleche" id = "fleche"></p>
+            <div class="grid-container">
+                <div class="imgContainer">
+                    <div class="exitContainer">
+                    <img id="u97_img" class="imgExit" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil/u8.svg?token=66482b0f852934aea48a7756ef472683bb8b1e3d838bde5e07a6eb53c4fb5027" tabindex="0" style="outline: currentcolor none medium;">
+                    <div class ="popupExit" id = "popupExit">
+                        <div class = "popupExitTitle">
+                            <span>Quitter l'espace membre</span>
+                        </div>
+                        <div class = "popupExit_p"> 
+                            <p>Voulez-vous quitter l'espace membre? <br> Tant que vous serez contecté, vous <br> pouvez revenir librement.</p>
+                        </div>
+                        <div class = "popupExitButtons">
+                            <span class = "popupExitAnnuler">Annuler</span>
+                        </div>
+                    </div>
+                    <p>public</p>
+                </div>
             </div>
-        </section> 
+            <div class="gird-item"><h1 class="title" id = "titre"></h1></div>
+            <div class="grid-item"></div>  
+            <div class="grid-item"></div>
+            <div class="grid-item"><h2 class="subtitle" id = "sous-titre"></h2></div>
+            <div class="imgContainer">
+                <div class="flecheContainer">
+                        <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u132.svg?token=38724f8578dadca04b24062ea89a98e4016f6848ebd15ac0f6438bffd97bb3fd" alt="">
+                        <p id="fleche" class="fleche"></p>
+                        
+                        
+                </div>
+            </div>  
+            </div>
+            
+           
+        </section>
 
-        <aisde class="commande">
-            <h1>Commande du matériel</h1>   
-                <form class="commandElem">
-                    <!-- <input type="text" class="commandElemInput" id="number" value="0"/> -->
-                
-                        <ul class =commandElemList>
-
-                        </ul>
-
-<!--                     
-                    <div>
-                        <input type="button" onclick="buttonPlus()"  /><br>
-                        <input type="button" onclick="buttonMinus()"  />
-                        <label id="commande" for="commandeName">Produit</label><br>
-                    </div> -->
-                    </form>
-                    <br><br><br>
-                <input type="text" id="autres"/>               
-        </aisde>
+        <aside class="commande">
+            <div class="grid-container2">
+                <div class="grid-item">Titre</div>
+                <div class="grid-item">
+                    <div class="inner-grid-container">
+                        <input type="text" class="commandElemInput" id="produit1Input">
+                        <div class="button-grid">
+                            <img  class="commandButtonUp"  src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/up_u345_a.svg?token=dd323c303b631cb9472ac63f245f65131f572bba100d33d1fc255de7f07e86a7" alt="">
+                            <img class="commandButtonDown" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/down_u344_a.svg?token=35b25404790ca77a83a5e2f594fc71ad2f395df71b7a0949a2374d40e26a5f44" alt="">
+                        </div>
+                        
+                        <p>produit</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="inner-grid-container">
+                        <input type="text" class="commandElemInput" id="produit2Input">
+                        <div class="button-grid">
+                            <img  class="commandButtonUp" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/up_u345_a.svg?token=dd323c303b631cb9472ac63f245f65131f572bba100d33d1fc255de7f07e86a7" alt="">
+                            <img class="commandButtonDown" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/down_u344_a.svg?token=35b25404790ca77a83a5e2f594fc71ad2f395df71b7a0949a2374d40e26a5f44" alt="">
+                        </div>
+                        
+                        <p>produit 1</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="inner-grid-container">
+                        <input type="text" class="commandElemInput" id="produit3Input">
+                        <div class="button-grid">
+                            <img  class="commandButtonUp" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/up_u345_a.svg?token=dd323c303b631cb9472ac63f245f65131f572bba100d33d1fc255de7f07e86a7" alt="">
+                            <img class="commandButtonDown" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/down_u344_a.svg?token=35b25404790ca77a83a5e2f594fc71ad2f395df71b7a0949a2374d40e26a5f44" alt="">
+                     </div>
+                        
+                        <p>produit</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="inner-grid-container">
+                        <input type="text" class="commandElemInput" id="produit4Input" value ="0">
+                        <div class="button-grid">
+                            <img  class="commandButtonUp" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/up_u345_a.svg?token=dd323c303b631cb9472ac63f245f65131f572bba100d33d1fc255de7f07e86a7" alt="">
+                            <img class="commandButtonDown" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/down_u344_a.svg?token=35b25404790ca77a83a5e2f594fc71ad2f395df71b7a0949a2374d40e26a5f44" alt="">
+                        </div>
+                        
+                        <p>produit</p>
+                    </div>
+                </div>
+                <div class="grid-item">Autres</div>
+            </div>
+        </aside>
 
         <section class="nouvelles_et_commandes">
             <div class = "nouvelles">
                 <h1>Nouvelles</h1>
                 <div class = "popup" id = "popup">
-                    <h1>Nouveau site Web transactionnel</h1>
-                    <p id = "popup_p">Après de nombreux mois d’efforts, Frigoscommunautaire.org 
+                    <img class = "xButton" id = "xButton" src = "https://image.flaticon.com/icons/png/512/458/458595.png" alt = "xButton"></img>
+                    <span class = "popup_title">Nouveau site Web transactionnel</span>
+                    <p class = "popup_p">Après de nombreux mois d’efforts, Frigoscommunautaire.org 
                         est ravie d’annoncer le lancement officiel de notre 
                         nouveau site Web en ligne. Ce site est entré en service le 1er 
                         février 2021 avec une nouvelle interface interactionnelle. 
@@ -70,7 +130,10 @@
                 <ul>
                     <li class="article-container">
                         <span class="article" id = "firstarticle">Nouveau site Web transactionnel</span><br>
-                        <span class="articlep">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore error reprehenderit in, labore dolorem eligendi rerum facere et eos fugit, natus dolor aliquam, dicta magni veniam quod quis tenetur quidem.</span>
+                        <span class="articlep">Après de nombreux mois d’efforts, Frigoscommunautaire.org 
+                            est ravie d’annoncer le lancement officiel de notre 
+                            nouveau site Web en ligne. Ce site est entré en service le 1er 
+                            février 2021 avec une nouvelle interface interactionnelle...</span>
                     </li>
                     <li class="article-container">
                         <span class="article">Nouveaux frigos arrivés</span><br>
@@ -106,22 +169,33 @@
                     </li>
                 </ul>
                 
-                
-                
             </div>
             <div class="column" id ="bottin">
                 <h1>Bottin</h1>
-                <ul>
-                    <li>    
-                        <span id="bottin_name"></span>
-                        <span id="bottin_email"></span>
-                    </li>
-                </ul>
                 
+                <ul id="bottin_liste">
+                   
+                </ul><textarea id="test" class="clipboard">Test</span>
             </div>
 
             <div class="column">
                 <h1>Compostage et partenaires</h1>
+                <div id="MTL_container" >
+                    <br>
+                    <a href="https://servicesenligne2.ville.montreal.qc.ca/sel/infocollectes/">
+                        <img class="logo_MTL"  src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u167.png?token=7a3e31b81acc0cd939d83775f3f5ab3aec45058e4db5e8dc66e2818e9e706bb2">
+                        <br>
+                        <span id="logoMTLdescription" class="logo_MTL_description">Info-collectes</span>
+                    </a>
+                </div>
+                <div id="brasserie_container">
+                    <a href="https://mabrasserie.com/">
+                        <br><br>
+                        <img class="logo_Brasserie" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u170.png?token=019d1a81a6b7826049cc05c6b4707b10138cf606894c4b22975a69c376fac8c1">
+                        <br>
+                        <span id="logoBrasseriedescription" class="logo_Brasserie_description">2300, rue Holt, Montréal (QC) H2G 1Y4 <br> info@mabrasserie.com <br>(514) 508-3309</span>   
+                    </a>
+                </div>
             </div>
         </section>
     </body>

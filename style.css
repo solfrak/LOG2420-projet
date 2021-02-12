@@ -1,21 +1,25 @@
 body {
   font-family: "Arial", sans-serif;
   background-color: rgba(228, 228, 228, 1);
+  margin-top: 0 !important;
 }
+
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+li{
+  margin-bottom: 5%;
+}
+
 .Guide{
   font-family: Roboto;
   font-size: 18px;
 
 }
-li{
-  margin-bottom: 5%;
-}
+
 .navigation {
   text-align: center;
   color: white;
@@ -31,40 +35,174 @@ li{
   font-style: normal;
   font-size: 200%;
   font-weight: 500;
-}
-
-.popup{
-  font-size: 100%;
-  visibility: hidden;
-  z-index: 1;
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-}
-
-#popup_p{
-  font-size: 10%;
+  margin: 0px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  text-align: center;
+  align-content: center;
   color: white;
   font-weight: 400;
+  margin: 0px;
 }
 
-.fleche {
-  text-align: right;
-}
 
 .frigos {
   float: right;
   width: 75%;
 }
 
-.bottin{
-  
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.inner-grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.button-grid{
+  display: grid;
 }
 
+.grid-item{
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.imgContainer{
+  position: relative;
+}
+.commandButton:hover{
+  cursor: pointer;
+}
+
+.exitContainer{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.flecheContainer{
+  text-align: right;
+}
+
+
+.imgExit{
+  transform: rotate(180deg);
+}
+
+.imgExit:hover{
+  cursor: pointer;
+}
+
+.fleche{
+  text-align: right;
+  margin: 0px;
+}
+
+.subtitle_container{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/*Pop-up article*/
+.popup{
+  visibility: hidden;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 582px;
+  height: 285px;
+  top: 50%;
+  left: 50%;
+  margin-top: -142px;
+  margin-left: -291px;
+  padding: 20px 15px 0px 15px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
+}
+
+.xButton{
+  top: -10px;
+  left: 100%;
+  width: 15px;
+  height: 15px;
+  border-width: 0px;
+  position: absolute;
+}
+
+.popup_title{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popup_p{
+  font-family: Arial;
+  font-size: 13px;
+}
+
+.popupExit{
+  visibility: visible;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 337px;
+  height: 331px;
+  top: 50%;
+  left: 50%;
+  margin-top: -168px;
+  margin-left: -165px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(121, 121, 121, 1);
+  border-radius: 5px;
+  color: #8C8C8C;
+  text-align: left;
+}
+
+.popupExitTitle{
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 6%;
+  white-space: nowrap;
+  border-bottom-color: #8C8C8C;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  padding-left: 3%;
+  padding-right: 14%;
+  padding-bottom: 5%;
+  box-sizing: border-box;
+}
+
+.popupExit_p{
+  top: 20%;
+  padding-left: 3%;
+  padding-right: 6%;
+  white-space: nowrap;
+  font-size: 18px;
+  position: absolute;
+  box-sizing: border-box;
+  padding-top: 6%;
+  padding-bottom: 20%;
+  border-bottom-color: black;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1.5px;
+}
+
+.popupExitButtons{
+  top: 50%;
+}
+/*Commandes*/
 .commande {
   float: right;
   margin: 0;
@@ -75,6 +213,8 @@ li{
 .commandElem{
   /* height: 10px; */
   float: left;
+  align-items: center;
+  text-align: left;
   width: 33.33%;
   column-count: 3;
 }
@@ -95,26 +235,12 @@ li{
   text-transform: none;
   border-color: transparent;
 }
+
+/*Nouvelles*/
 .nouvelles {
   float: left;
   width: 66.66%;
 
-}
-
-.bas_de_page {
-  display: flex;
-  width: 100%;
-  bottom: 0;
-  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(242, 242, 242) 0%, rgb(228, 228, 228) 100%, rgb(255, 255, 255) 100%);
-}
-.column {
-  float: left;
-  width: 33.33%;
-  font-weight: bold;
-}
-
-
-#bottin {
 }
 
 .article{
@@ -125,6 +251,10 @@ li{
 .article:hover {
   cursor: pointer;
 }
+.xButton:hover{
+  cursor: pointer;
+}
+
 .articlep{
   font-family: Arial, sans-serif;
   font-size: 13px;
@@ -134,15 +264,67 @@ h1{
   font-family: Arial, sans-serif;
   font-size: 24px;
 }
-.popup{
-  background-color: rgba(255, 255, 255, 1);
-  /* border-width: 0px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 582px;
-  height: 295px;
+
+/*Bas de page*/
+/*Template*/
+.bas_de_page {
   display: flex;
-  text-align: left; */
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(242, 242, 242) 0%, rgb(228, 228, 228) 100%, rgb(255, 255, 255) 100%);
 }
 
+.column {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  font-weight: bold;
+}
+
+/*Bottin*/
+.nom{
+  position: relative;
+  font-size: 14px;
+  font-family: "Roboto";
+  font-weight: 700;
+  text-align: left;
+  color: rgb(51,51,51);
+
+}
+.email{
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: lighter;
+}
+.copy_icon{
+  position: relative;
+  padding-left: 9px;
+  height:15px;
+  width:15px;
+  cursor: pointer;
+}
+.clipboard
+{
+  display: none;
+}
+/*Compostage et Partenaires*/
+a{
+  text-decoration: none;
+}
+.logo_MTL, .logo_Brasserie {
+  position: relative;
+  width:129px;
+  cursor:pointer;
+}
+.logo_MTL{
+  height:27px;
+}
+.logo_Brasserie{
+  height: 45px;
+}
+.logo_MTL_description, .logo_Brasserie_description{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(51,51,51);
+  cursor: pointer;
+}
