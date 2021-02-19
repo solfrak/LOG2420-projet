@@ -79,18 +79,53 @@ function buttonPlus(id){
  
 
 
+//Function pour les commandes
+function up1(){
+    var input = document.getElementById("produit1Input");
+    var quantite = parseInt(input.value);
+    quantite++;
+    input.value = quantite;
+}
+function up2(){
+    var input = document.getElementById("produit2Input");
+    var quantite = parseInt(input.value);
+    quantite++;
+    input.value = quantite;
+}
+function up3(){
+    var input = document.getElementById("produit3Input");
+    var quantite = parseInt(input.value);
+    quantite++;
+    input.value = quantite;
+}
+function up4(){
+    var input = document.getElementById("produit4Input");
+    var quantite = parseInt(input.value);
+    quantite++;
+    input.value = quantite;
+}
 
-var buttonUpArray = document.getElementsByClassName("commandButtonUp");
-buttonUpArray[0].addEventListener("click", function(){
-    buttonPlus(1);
-});
-buttonUpArray[1].addEventListener("click", function(){
-    buttonPlus(2);
-});
-buttonUpArray[2].addEventListener("click", function(){
-    buttonPlus(3);
-});
-buttonUpArray[3].addEventListener("click", function(){
-    buttonPlus(4);
-});
-
+function down1(){
+    var input = document.getElementById("produit1Input");
+    var quantite = parseInt(input.value);
+    quantite--;
+    input.value = quantite;
+}
+function down2(){
+    var input = document.getElementById("produit2Input");
+    var quantite = parseInt(input.value);
+    quantite--;
+    input.value = quantite;
+}
+function down3(){
+    var input = document.getElementById("produit3Input");
+    var quantite = parseInt(input.value);
+    quantite--;
+    input.value = quantite;
+}
+function down4(){
+    var input = document.getElementById("produit4Input");
+    var quantite = parseInt(input.value);
+    quantite--;
+    input.value = quantite;
+}
