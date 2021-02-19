@@ -4,7 +4,6 @@ function login()
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var benevoleCheckbox = document.getElementById("benevole");
-    console.log("failed to log in");
     if(username == "jbradette" && password == "123456" && benevoleCheckbox.checked == true)
     {   
         location.href = './mainPage.html';

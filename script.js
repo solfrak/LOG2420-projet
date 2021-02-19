@@ -19,43 +19,38 @@ function fTitre(data)
 
 function fBottin(data)  
 {   
-    var text ="";
-    var email="";
-    var i = 0
-    var x;
-    // img = document.createElement("img");
-    // img.src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u205.svg?token=07c1b4bb307dcfd048f571e8a652f4ff63a7395c85661a1dc9bf0a217123e94f";
-    // img.id="copy_icon";
-    // img.class ="copy_icon";
-    
+    let text ="";
+    let email="";
+    let x;
+   
     for (x in data.bottin){
         text = data.bottin[x].name +" "+ data.bottin[x].lastName + " - "+ data.bottin[x].poste + "<br>";
-        email = data.bottin[x].email + "<img class='copy_icon' id ='copy_icon' src='https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u205.svg?token=07c1b4bb307dcfd048f571e8a652f4ff63a7395c85661a1dc9bf0a217123e94f'>" + "<br>";
-        document.getElementById("bottin_liste").innerHTML += "<li><div class='nom'>" +  text +"</div>" + "<div class='email'>" +  email + "</div>" + "</li>";
-        // document.getElementById("email").appendChild(img);
+        email = '<p>'+data.bottin[x].email+ '</p>' + "<img class='copy_icon' id ='copy_icon' src='/picture/u205.svg'>" + "<br>";
+        document.getElementById("bottin_liste").innerHTML += "<li><div class='nom'>" +  text +"</div>" + "<div class='email' onClick='copyToClipboard(this)'>" +  email + "</div>" + "</li>";
     }
 }
 
 
-function copyToClipboard(data){
-    //text = data.bottin[x].email;
-    document.createElement("textarea");
-    text = "test";
-    document.execCommand("copy");
-    console.log("Copied to clipBoard");
+
+function copyToClipboard(elem){
+
+    let division1 = elem.innerHTML.split('<p>'); //divise le string aux endroits avec <p>
+    let division2 = division1[1].split('</p>');  //divise le string aux endroits avec </p>
+    
+    let text = document.createElement('textarea');
+    text.value = division2[0]; // le email clicke
+    document.body.appendChild(text);
+    text.select();
+    document.execCommand('copy');
+    text.remove(); //on veut pas afficher le textarea
 }   
 
 
-document.getElementById("test").addEventListener("click", function(data) {
-    copyToClipboard(data);
-    });
-
 function buttonPlus(id){
     console.log('button plus');
-    var input = document.getElementById("produit" + id + "input");
+    let input = document.getElementById("produit" + id + "input");
     input.value += parseInt(input.value,10)+1;
     }    
-
 
 
  function buttonMinus(id){
@@ -69,63 +64,100 @@ function buttonPlus(id){
  function popupButton(){
     document.getElementById("popup").style.visibility = "hidden";
  }
+
+ function popup2(){
+    document.getElementById("popup2").style.visibility = "visible";
+ }
+
+ function popupButton2(){
+    document.getElementById("popup2").style.visibility = "hidden";
+ }
  
  function popupExitButton(){
      document.getElementById("popupExit").style.visibility = "visible";
  }
- document.getElementById("firstarticle").addEventListener("click", popup);
+
+ function popupExitAnnuler(){
+    document.getElementById("popupExit").style.visibility = "hidden";
+}
+
+ function popupExitOk(){
+    location.href = './index.html';
+}
+
+varPopupExitLoaded = document.getElementById("popupExit");
+if(varPopupExitLoaded){
+    document.getElementById("popupExitAnnuler").addEventListener("click", popupExitAnnuler);
+    document.getElementById("popupExitOk").addEventListener("click", popupExitOk);
+
+}
+
+ document.getElementById("firstarticlecontainer").addEventListener("click", popup);
+ document.getElementById("firstGuide").addEventListener("click", popup2);
  document.getElementById("xButton").addEventListener("click", popupButton);
+ document.getElementById("xButton2").addEventListener("click", popupButton2);
  document.getElementById("u97_img").addEventListener("click", popupExitButton);
- 
 
 
 //Function pour les commandes
-function up1(){
-    var input = document.getElementById("produit1Input");
-    var quantite = parseInt(input.value);
-    quantite++;
-    input.value = quantite;
-}
-function up2(){
-    var input = document.getElementById("produit2Input");
-    var quantite = parseInt(input.value);
-    quantite++;
-    input.value = quantite;
-}
-function up3(){
-    var input = document.getElementById("produit3Input");
-    var quantite = parseInt(input.value);
-    quantite++;
-    input.value = quantite;
-}
-function up4(){
-    var input = document.getElementById("produit4Input");
-    var quantite = parseInt(input.value);
+function up(InputTextId){
+    let input = document.getElementById(InputTextId);
+    let quantite = parseInt(input.value);
     quantite++;
     input.value = quantite;
 }
 
-function down1(){
-    var input = document.getElementById("produit1Input");
-    var quantite = parseInt(input.value);
+
+function down(InputTextId){
+    let input = document.getElementById(InputTextId);
+    let quantite = parseInt(input.value);
     quantite--;
     input.value = quantite;
 }
-function down2(){
-    var input = document.getElementById("produit2Input");
-    var quantite = parseInt(input.value);
-    quantite--;
-    input.value = quantite;
-}
-function down3(){
-    var input = document.getElementById("produit3Input");
-    var quantite = parseInt(input.value);
-    quantite--;
-    input.value = quantite;
-}
-function down4(){
-    var input = document.getElementById("produit4Input");
-    var quantite = parseInt(input.value);
-    quantite--;
-    input.value = quantite;
+
+function commandes(){
+    var element  = document.getElementById('Potato');
+    for(x in data.Produit){
+
+        let Nom = document.createElement("p");
+        Nom.className ="product_name";
+        nom.innerHTML = data.Produit[x].NomProduit;
+
+        let produit = document.createElement("div");
+        produit.className = "grid-item";
+
+        let produit2 = document.createElement("div");
+        produit2.className = "inner-grid-container";
+
+        let InputElement = document.createElement("input");
+        InputElement.className = "commandElemInput";
+        inputElement.id ="produit"+x+"Input";
+        inputElement.value = 0;
+
+        let ButtonElement = document.createElement("div");
+        ButtonElement.className = "button-grid";
+        
+        let buttonUp = document.createElement("img");
+        buttonUp.className= "commandButtonUp";
+        buttonUp.alt = "";
+        buttonUp.src ="/picture/up_u345_a.svg";
+        buttonUp.onClick() = up(inputElement.id);
+        
+        let buttonDown = document.createElement("img");
+        buttonDown.className= "commandButtonDown";
+        buttonDown.alt = "";
+        buttonDown.src ="/picture/down_u344_a.svg";
+        buttonDown.onClick() = down(inputElement.id);
+
+        //Ajouter les boutons a ButtonElement
+        ButtonElement.appendChild(buttonUp);
+        ButtonElement.appendChild(buttonDown);
+
+        produit.appendChild(InputElement);
+        produit2.appendChild(ButtonElement);
+        produit2.appendChild(Nom);
+
+        produit.appendChild(produit2);
+
+        }
 }

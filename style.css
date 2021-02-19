@@ -4,7 +4,9 @@ body {
   margin-top: 0 !important;
 }
 
-
+aside{
+  border-style: none;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -17,9 +19,6 @@ li{
 .Guide{
   font-family: Roboto;
   font-size: 18px;
-
-}
-.grid-container2{
 
 }
 
@@ -55,26 +54,7 @@ li{
   width: 75%;
 }
 
-.grid-container{
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.inner-grid-container{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 100px;
-}
-.button-grid{
-  display: grid;
-  padding: 0;
-  margin: 0;
-}
 
-.grid-item{
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-}
 
 .imgContainer{
   position: relative;
@@ -132,6 +112,20 @@ li{
   box-shadow: 2px 2px 5px rgb(0 0 0 / 35%);
 }
 
+.firstGuide:hover{
+  cursor: pointer;
+}
+
+.popup2{
+  visibility: hidden;
+}
+
+.popup2_p{
+  top: 25%;
+  position: absolute;
+  padding-right: 10%;
+}
+
 .xButton{
   top: -10px;
   left: 100%;
@@ -149,11 +143,12 @@ li{
 
 .popup_p{
   font-family: Arial;
+  font-weight: normal;
   font-size: 13px;
 }
 
 .popupExit{
-  visibility: visible;
+  visibility: hidden;
   z-index: 1;
   background-color: rgb(255, 255, 255);
   position: fixed;
@@ -205,18 +200,20 @@ li{
   border-bottom-width: 1.5px;
 }
 
-.itemCommand{
-  text-align: left;
-}
+
 .popupExitButtons{
   font-size: 18px;
-  position: absolute;
+  left: 45%;
   top: 87%;
-  display: inline-block;
+  position: relative;
 }
 
 .popupExitAnnuler{
   color: rgba(0, 140, 140, 1);
+}
+
+.popupExitAnnuler:hover {
+  cursor: pointer;
 }
 
 .popupExitOk{
@@ -230,55 +227,105 @@ li{
   padding-bottom: 3%;
 }
 
+.popupExitOk:hover {
+  cursor: pointer;
+}
+
 /*Commandes*/
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.inner-grid-container{
+  display: grid;
+  grid-template-columns: 7rem 1rem 5rem;
+  grid-column-gap: 15px;
+}
+.button-grid{
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-item{
+  display: relative;
+  padding-left: 14%;
+  padding-top: 5px;
+  padding-right: 12%;
+  margin: 0px;
+  text-align: center;
+}
 .commande {
+  font-family: Arial;
+  font-weight: 400;
   float: right;
   margin: 0;
   width: 33.33%;
   outline-style: solid;
   outline-color: black;
+  text-align: left;
+}
+.commande_title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .commandElem{
   /* height: 10px; */
-  float: left;
+  /* float: right; */
   align-items: center;
-  text-align: left;
   width: 33.33%;
   column-count: 3;
 }
-.commandElemInput {
-  
+
+.commandElemInput {  
   width: 80px;
   height: 40px;
   border-radius: 15%;
-  padding: 10px 10px 10px 10px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  padding-left: 10px;
+
   font-size: 18px;
-  letter-spacing: normal;
   color: #8C8C8C;
   vertical-align: none;
   text-align: left;
-  text-transform: none;
   border-color: transparent;
 }
-
+.product_name{
+  font-size: 17px;
+ 
+}
 .commandElemComment{
+  display: flex;
   width: 289px;
   height: 79px;
-  padding: 2px 2px 2px 2px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  padding: 2px;
   font-size: 18px;
-  letter-spacing: normal;
   color: #000000;
   vertical-align: none;
-  text-align: left;
   text-transform: none;
   border-color: transparent;  
 }
+.commandElemInput_button {
+  font-size: 19px;
+  position: relative;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 190px;
+  height: 40px;
+  border-style: none;
+  border-radius: 5px;
+  color: #FFFFFF;
+  background-color: #008c8c;
+}
+.commandElemInput_button:hover{
+  cursor:pointer;
+}
+.autres_title{
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 1px;
+}
+
 /*Nouvelles*/
 .nouvelles {
   float: left;
@@ -291,7 +338,7 @@ li{
   font-size: 18px;
 }
 
-.article:hover {
+.firstarticlecontainer:hover {
   cursor: pointer;
 }
 .xButton:hover{
@@ -367,4 +414,9 @@ a{
   font-weight: 400;
   color: rgb(51,51,51);
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+
 }

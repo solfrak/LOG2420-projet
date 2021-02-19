@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+        
         <title>Acceuil</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -25,8 +26,8 @@
                             <p>Voulez-vous quitter l'espace membre? <br> Tant que vous serez contecté, vous <br> pouvez revenir librement.</p>
                         </div>
                         <div class = "popupExitButtons">
-                            <span class = "popupExitAnnuler">Annuler</span>
-                            <span class = "popupExitOk">Ok</span>
+                            <span class = "popupExitAnnuler" id = "popupExitAnnuler">Annuler</span>
+                            <span class = "popupExitOk" id = "popupExitOk">Ok</span>
                         </div>
                     </div>
                     <p>public</p>
@@ -50,58 +51,63 @@
         </section>
 
         <aside class="commande">
-            <div class="grid-container2">
-                <div class="grid-item">Titre</div>
+            <div class="grid-container2" id= "Potato">
+                <div class="grid-item"> 
+                    <span class="commande_title">Commande du matériel</span>
                 <div class="grid-item">
                     <div class="inner-grid-container">
                         <input type="text" class="commandElemInput" id="produit1Input" value="0">
                         <div class="button-grid">
-                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up1()">
-                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down1()">
+                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up('produit1Input')">
+                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down('produit1Input')">
                         </div>
                         
-                        <p>Savon</p>
+                        <p class="product_name">Savon</p>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="inner-grid-container">
                         <input type="text" class="commandElemInput" id="produit2Input" value ="0">
                         <div class="button-grid">
-                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up2()">
-                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down2()">
+                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up('produit2Input')">
+                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down('produit2Input')">
                         </div>
                         
-                        <p>Guenille</p>
+                        <p class="product_name">Guenille</p>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="inner-grid-container">
                         <input type="text" class="commandElemInput" id="produit3Input" value ="0">
                         <div class="button-grid">
-                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up3()">
-                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down3()">
+                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up('produit3Input')">
+                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down('produit3Input')">
                      </div>
                         
-                        <p>Désodorisant</p>
+                        <p class="product_name">Désodorisant</p>
                     </div>
                 </div>
                 <div class="grid-item">
                     <div class="inner-grid-container">
                         <input type="text" class="commandElemInput" id="produit4Input" value ="0">
                         <div class="button-grid">
-                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up4()">
-                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down4()">
+                            <img  class="commandButtonUp"  src="/picture/up_u345_a.svg" alt="" onclick="up('produit4Input')">
+                            <img class="commandButtonDown" src="/picture/down_u344_a.svg" alt="" onclick="down('produit4Input')">
                         </div>
                         
-                        <p class="itemCommand">Ampoules</p>
+                        <p class="product_name">Ampoules</p>
                     </div>
                 </div>
                 <div class="grid-item">
-                    <div>Autre</div>
-                    <input type="text" class="commandElemComment" id="">
+                    <div> 
+                        <p class="autres_title">Autres:</p>
+                    </div>
+                    
+                    <input type="text" class="commandElemComment" id=""> 
+                    
                 </div>
                 <div class="grid-item">
-                    <button class="commandElemInput">test</button>
+                    <button class="commandElemInput_button">Commander</button>
                 </div>
 
 
@@ -138,11 +144,13 @@
                 </div>
                 <ul>
                     <li class="article-container">
-                        <span class="article" id = "firstarticle">Nouveau site Web transactionnel</span><br>
-                        <span class="articlep">Après de nombreux mois d’efforts, Frigoscommunautaire.org 
-                            est ravie d’annoncer le lancement officiel de notre 
-                            nouveau site Web en ligne. Ce site est entré en service le 1er 
-                            février 2021 avec une nouvelle interface interactionnelle...</span>
+                        <div class="firstarticlecontainer" id="firstarticlecontainer">
+                            <span class="article" id = "firstarticle">Nouveau site Web transactionnel</span><br>
+                            <span class="articlep">Après de nombreux mois d’efforts, Frigoscommunautaire.org 
+                                est ravie d’annoncer le lancement officiel de notre 
+                                nouveau site Web en ligne. Ce site est entré en service le 1er 
+                                février 2021 avec une nouvelle interface interactionnelle...</span>
+                        </div>
                     </li>
                     <li class="article-container">
                         <span class="article">Nouveaux frigos arrivés</span><br>
@@ -163,9 +171,21 @@
         <section class="bas_de_page">
             <div class="column" id="guide">
                 <h1>Guides d'entretien</h1>
+                <div class="popup2 popup"id="popup2">
+                    <img class = "xButton" id = "xButton2" src = "https://image.flaticon.com/icons/png/512/458/458595.png" alt = "xButton"></img>
+                    <span class = "popup_title">Nettoyage et vérifications générales</span>
+                    <p class = "popup_p popup2_p">Les portes d’un réfrigérateur se ferment hermétiquement grâce aux joints en caoutchouc (généralement blancs) situées
+                    tout autour des portes. Une saleté excessive pourrait empêche les joints de bien isoler l’espace entre le cabinet et la
+                    porte de réfrigérateur, ce qui causera une fuite d’air. Cette fuite fera augmenter la température et donc surchauffer le
+                    compresseur. Une autre conséquence est que la saleté pourrait causer l’adhérence du joint, qui, s’il reste collé,
+                    pourrait déchirer lors de l’ouverture de la porte. Pour éviter tous ces tracas, prenez 5 minutes une fois par mois pour
+                    les nettoyer à l’aide d’un linge humide pour éliminer les saletés. Changer un joint de porte peut coûter plus de 150$!
+                    Des frais facilement évitables Réf" https://service2000.ca/eviter-reparations-de-refrigerateur/</p>
+
+                </div>
                 <ul>
                     <li>
-                        <span class="Guide">Nettoyage et vérifications générales</span><br>
+                        <span class="Guide firstGuide" id="firstGuide">Nettoyage et vérifications générales</span><br>
                     </li>
                     <li>
                         <span class="Guide">Nettoyage des serpentins  du condenseur</span><br>
@@ -183,7 +203,6 @@
                 <h1>Bottin</h1>
                 <ul id="bottin_liste"> 
                 </ul>
-                <span id="test" class="clipboard">Test</span>
             </div>
 
             <div class="column">
@@ -191,7 +210,7 @@
                 <div id="MTL_container" >
                     <br>
                     <a href="https://servicesenligne2.ville.montreal.qc.ca/sel/infocollectes/">
-                        <img class="logo_MTL"  src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u167.png?token=7a3e31b81acc0cd939d83775f3f5ab3aec45058e4db5e8dc66e2818e9e706bb2">
+                        <img class="logo_MTL"  src="/picture/u167.png">
                         <br>
                         <span id="logoMTLdescription" class="logo_MTL_description">Info-collectes</span>
                     </a>
@@ -199,7 +218,7 @@
                 <div id="brasserie_container">
                     <a href="https://mabrasserie.com/">
                         <br><br>
-                        <img class="logo_Brasserie" src="https://d1icd6shlvmxi6.cloudfront.net/gsc/PYTPZI/ad/0f/42/ad0f4261607f4820a8707041ade94ff0/images/accueil_service/u170.png?token=019d1a81a6b7826049cc05c6b4707b10138cf606894c4b22975a69c376fac8c1">
+                        <img class="logo_Brasserie" src="/picture/u170.jpg">
                         <br>
                         <span id="logoBrasseriedescription" class="logo_Brasserie_description">2300, rue Holt, Montréal (QC) H2G 1Y4 <br> info@mabrasserie.com <br>(514) 508-3309</span>   
                     </a>
