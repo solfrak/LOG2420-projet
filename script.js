@@ -6,7 +6,7 @@ fetch("./data.json")
 .then(data => {
     fTitre(data);
     fBottin(data);
-    //fProduit(data);
+    commandes(data);
 });
 
 
@@ -115,51 +115,57 @@ function down(InputTextId){
     input.value = quantite;
 }
 
-function commandes(){
-    var element  = document.getElementById('Potato');
-    for(x in data.Produit){
+function commandes(data){
+    let element  = document.getElementById("Potato");
 
-        //DIV parent
-        let produit = document.createElement("div");
-        produit.className = "grid-item";
-        //DIV enfant 1
-        let produit2 = document.createElement("div");
-        produit2.className = "inner-grid-container";
-        // NOM du PRODUIT
-        let Nom = document.createElement("p");
-        Nom.className ="product_name";
-        Nom.innerHTML = data.Produit[x].NomProduit;
-        //INPUT affichant le nombre
-        let InputElement = document.createElement("input");
-        InputElement.className = "commandElemInput";
-        inputElement.id ="produit"+x+"Input";
-        inputElement.value = 0;
-        // ZONE DES BOUTTONS
-        let ButtonElement = document.createElement("div");
-        ButtonElement.className = "button-grid";
-        //BOUTTONS +
-        let buttonUp = document.createElement("img");
-        buttonUp.className = "commandButtonUp";
-        buttonUp.alt = "";
-        buttonUp.src ="/picture/up_u345_a.svg";
-        buttonUp.onClick() = up(inputElement.id);
-        //BOUTTONS -
-        let buttonDown = document.createElement("img");
-        buttonDown.className = "commandButtonDown";
-        buttonDown.alt = "";
-        buttonDown.src ="/picture/down_u344_a.svg";
-        buttonDown.onClick() = down(inputElement.id);
+    // for(x in data.Produit){
 
-        //Ajouter les boutons a ButtonElement
-        ButtonElement.appendChild(buttonUp);
-        ButtonElement.appendChild(buttonDown);
-        //Ajouter Input, les bouttons et le nom au  DIV enfant
-        produit.appendChild(InputElement);
-        produit2.appendChild(ButtonElement);
-        produit2.appendChild(Nom);
-        //Ajouter le tout aux DIV parent
-        produit.appendChild(produit2);
+    //     //DIV parent
+    //     let produit = document.createElement("div");
+    //     produit.className = "grid-item";
+    //     //DIV enfant 1
+    //     let produit2 = document.createElement("div");
+    //     produit2.className = "inner-grid-container";
+    //     // NOM du PRODUIT
+    //     let Nom = document.createElement("p");
+    //     Nom.className ="product_name";
+    //     Nom.innerHTML = data.Produit[x].NomProduit;
+    //     //INPUT affichant le nombre
+    //     let InputElement = document.createElement("input");
+    //     InputElement.className = "commandElemInput";
+    //     inputElement.id ="produit"+x+"Input";
+    //     inputElement.value = 0;
+    //     // ZONE DES BOUTTONS
+    //     let ButtonElement = document.createElement("div");
+    //     ButtonElement.className = "button-grid";
+    //     //BOUTTONS +
+    //     let buttonUp = document.createElement("img");
+    //     buttonUp.className = "commandButtonUp";
+    //     buttonUp.alt = "";
+    //     buttonUp.src ="/picture/up_u345_a.svg";
+    //     buttonUp.onClick() = up(inputElement.id);
+    //     //BOUTTONS -
+    //     let buttonDown = document.createElement("img");
+    //     buttonDown.className = "commandButtonDown";
+    //     buttonDown.alt = "";
+    //     buttonDown.src ="/picture/down_u344_a.svg";
+    //     buttonDown.onClick() = down(inputElement.id);
 
-    }
+    //     //Ajouter les boutons a ButtonElement
+    //     ButtonElement.appendChild(buttonUp);
+    //     ButtonElement.appendChild(buttonDown);
+    //     //Ajouter Input, les bouttons et le nom au  DIV enfant
+    //     produit.appendChild(InputElement);
+    //     produit2.appendChild(ButtonElement);
+    //     produit2.appendChild(Nom);
+    //     //Ajouter le tout aux DIV parent
+    //     produit.appendChild(produit2);
 
+    //     element.appendChild(produit);
+    //}
+    console.log(element);
+    let test = document.createElement("p");
+    test.innerHTML = "ketchup";
+    element.appendChild(test);
 }
+
