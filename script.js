@@ -6,10 +6,131 @@ fetch("./data.json")
 .then(data => {
     fTitre(data);
     fBottin(data);
-    commandes(data);
+    fNouvelles(data);
+    fGuide(data);
 });
 
+function fGuide(data){
+    let guide = document.getElementById("Guide");
+    //Creation popup guide
+    let popupContainer = document.createElement("div");
+    for(x in data.Guide){
+        let popup = document.createElement("div");
+        popup.className = "popup2 popup";
+        popup.id = "GuidePopup" + x;
+        popup.onclick = function(){
+            popupButton2(this.id);
+        };
+        let myImg = document.createElement("img");
+        myImg.className = "xButton";
+        myImg.id = "xButton2"
+        myImg.src = "https://image.flaticon.com/icons/png/512/458/458595.png";
 
+        let myTitle = document.createElement("span");
+        myTitle.className = "popup_title";
+        myTitle.innerHTML = data.Guide[x].titre;
+
+        let myDescription = document.createElement("span");
+        myDescription.className = "popup_p popup2_p";
+        myDescription.innerHTML = data.Guide[x].description;
+
+        popup.appendChild(myTitle);
+        popup.appendChild(myDescription);
+        popupContainer.appendChild(popup);
+    }
+
+    guide.appendChild(popupContainer);
+
+    //Creation guide liste
+    let myListe = document.createElement("ul");
+
+    for(x in data.Guide){
+        let itemListe = document.createElement("li");
+        itemListe.id = "item" +x;
+        itemListe.onclick = function(){
+            popup2(this.id[4]);
+        };
+
+        let myTitle = document.createElement("span");
+        myTitle.className = "Guide firstGuide";
+        myTitle.id = "firstGuide" +x;
+        myTitle.innerHTML = data.Guide[x].titre;
+
+        let retourLigne = document.createElement("br");
+
+        itemListe.appendChild(myTitle);
+        
+        myListe.appendChild(itemListe);
+    }
+
+    guide.appendChild(myListe);
+}
+
+function fNouvelles(data){
+    let news = document.getElementById("Nouvelles");
+    //Creation popup
+    let popupContainer = document.createElement("div");
+    for(x in data.Nouvelles){
+    let popup = document.createElement("div");
+    popup.className = "popup";
+    popup.id = "popup" + x;
+    popup.onclick = function(){
+        popupButton(this.id);
+    }
+    
+    let myImg = document.createElement("img");
+    myImg.className = "xButton";
+    myImg.id = "xButton";
+    myImg.src = "https://image.flaticon.com/icons/png/512/458/458595.png";
+    
+    let myTitle = document.createElement("span");
+    myTitle.className = "popup_title";
+    myTitle.innerHTML = data.Nouvelles[x].titre;
+
+    let myDescription = document.createElement("p");
+    myDescription.className = "popup_p";
+    myDescription.innerHTML = data.Nouvelles[x].descriptionDetail; 
+
+    popup.appendChild(myImg);
+    popup.appendChild(myTitle);
+    popup.appendChild(myDescription);
+    popupContainer.appendChild(popup);
+    }
+    news.appendChild(popupContainer);
+
+    //Creation nouvelles
+    let unList = document.createElement("ul");
+    for(x in data.Nouvelles){
+        let itemListe = document.createElement("li");
+        itemListe.className = "article-container";
+        let article = document.createElement("div");
+        article.onclick = function(){
+            
+            popup(this.id[16]);
+        };
+        article.className = "firstarticlecontainer";
+        article.id = "articleConainter" + x;
+
+        let articleTitle = document.createElement("span");
+        articleTitle.className = "article";
+        articleTitle.id = "firstarticle";
+        articleTitle.innerHTML = data.Nouvelles[x].titre;
+
+        let articleDescription = document.createElement("span");
+        articleDescription.className = "articlep";
+        articleDescription.innerHTML = data.Nouvelles[x].description;
+
+        let retourLigne = document.createElement("br");
+        article.appendChild(articleTitle);
+        article.appendChild(retourLigne);
+        article.appendChild(articleDescription);
+
+        itemListe.appendChild(article);
+        unList.appendChild(itemListe);
+    }
+    
+    news.appendChild(unList);
+}
 function fTitre(data)
 {
     document.getElementById("titre").innerHTML = data.donne[0].titre;
@@ -57,20 +178,21 @@ function buttonPlus(id){
     input.value += parseInt(input.value,10)-1;
  }
 
- function popup(){
-    document.getElementById("popup").style.visibility = "visible";
+ function popup(elem){
+
+    document.getElementById("popup" + elem).style.visibility = "visible";
  }
  
- function popupButton(){
-    document.getElementById("popup").style.visibility = "hidden";
+ function popupButton(elemId){
+    document.getElementById(elemId).style.visibility = "hidden";
  }
 
- function popup2(){
-    document.getElementById("popup2").style.visibility = "visible";
+ function popup2(elem){
+    document.getElementById("GuidePopup" + elem).style.visibility = "visible";
  }
 
- function popupButton2(){
-    document.getElementById("popup2").style.visibility = "hidden";
+ function popupButton2(elem){
+    document.getElementById(elem).style.visibility = "hidden";
  }
  
  function popupExitButton(){
@@ -92,7 +214,7 @@ if(varPopupExitLoaded){
 
 }
 
- document.getElementById("firstarticlecontainer").addEventListener("click", popup);
+ //document.getElementById("firstarticlecontainer").addEventListener("click", popup);
  document.getElementById("firstGuide").addEventListener("click", popup2);
  document.getElementById("xButton").addEventListener("click", popupButton);
  document.getElementById("xButton2").addEventListener("click", popupButton2);
@@ -115,57 +237,4 @@ function down(InputTextId){
     input.value = quantite;
 }
 
-function commandes(data){
-    let element  = document.getElementById("Potato");
-
-    // for(x in data.Produit){
-
-    //     //DIV parent
-    //     let produit = document.createElement("div");
-    //     produit.className = "grid-item";
-    //     //DIV enfant 1
-    //     let produit2 = document.createElement("div");
-    //     produit2.className = "inner-grid-container";
-    //     // NOM du PRODUIT
-    //     let Nom = document.createElement("p");
-    //     Nom.className ="product_name";
-    //     Nom.innerHTML = data.Produit[x].NomProduit;
-    //     //INPUT affichant le nombre
-    //     let InputElement = document.createElement("input");
-    //     InputElement.className = "commandElemInput";
-    //     inputElement.id ="produit"+x+"Input";
-    //     inputElement.value = 0;
-    //     // ZONE DES BOUTTONS
-    //     let ButtonElement = document.createElement("div");
-    //     ButtonElement.className = "button-grid";
-    //     //BOUTTONS +
-    //     let buttonUp = document.createElement("img");
-    //     buttonUp.className = "commandButtonUp";
-    //     buttonUp.alt = "";
-    //     buttonUp.src ="/picture/up_u345_a.svg";
-    //     buttonUp.onClick() = up(inputElement.id);
-    //     //BOUTTONS -
-    //     let buttonDown = document.createElement("img");
-    //     buttonDown.className = "commandButtonDown";
-    //     buttonDown.alt = "";
-    //     buttonDown.src ="/picture/down_u344_a.svg";
-    //     buttonDown.onClick() = down(inputElement.id);
-
-    //     //Ajouter les boutons a ButtonElement
-    //     ButtonElement.appendChild(buttonUp);
-    //     ButtonElement.appendChild(buttonDown);
-    //     //Ajouter Input, les bouttons et le nom au  DIV enfant
-    //     produit.appendChild(InputElement);
-    //     produit2.appendChild(ButtonElement);
-    //     produit2.appendChild(Nom);
-    //     //Ajouter le tout aux DIV parent
-    //     produit.appendChild(produit2);
-
-    //     element.appendChild(produit);
-    //}
-    console.log(element);
-    let test = document.createElement("p");
-    test.innerHTML = "ketchup";
-    element.appendChild(test);
-}
 

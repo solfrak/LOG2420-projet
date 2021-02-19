@@ -296,13 +296,13 @@ li{
   text-align: left;
 }
 .commandElemComment{
+  position: relative;
   width: 289px;
   height: 79px;
   padding: 2px;
   font-size: 18px;
   color: #000000;
   vertical-align: none;
-  text-transform: none;
   border-color: transparent;  
 }
 .commandElemInput_button {
