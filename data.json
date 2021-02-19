@@ -41,5 +41,9 @@
         { "NomProduit": "Guenillhe"},
         { "NomProduit": "Désodorisant"},
         { "NomProduit": "Ampoules"}
+    ],
+
+    "Guide":[
+        {}
     ]
 }
